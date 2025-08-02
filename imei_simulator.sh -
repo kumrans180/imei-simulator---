@@ -1,0 +1,7 @@
+#!/bin/bash
+clear
+cat assets/banner.txt
+echo -e "\n🔍 Enter IMEI:"
+read imei
+python3 imei_validator.py "$imei"
+mpv assets/beep.mp3 &>/dev/null
