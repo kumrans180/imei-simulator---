@@ -1,0 +1,23 @@
+import sys
+imei = sys.argv[1]
+
+def validate_imei(imei):
+    if len(imei) != 15 or not imei.isdigit():
+        return False
+    sum = 0
+    for i in range(14):
+        digit = int(imei[i])
+        if i % 2 == 1:
+            digit *= 2
+            if digit > 9:
+                digit -= 9
+        sum += digit
+    check_digit = (10 - (sum % 10)) % 10
+    return check_digit == int(imei[-1])
+
+if validate_imei(imei):
+    print(f"\n✅ Valid IMEI: {imei}")
+    print("📱 Device: Simulated Nokia 3310")
+    print("📍 Status: Location Found (Simulated)")
+else:
+    print(f"\n❌ Invalid IMEI: {imei}")
