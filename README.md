@@ -6,7 +6,7 @@ A terminal-based IMEI validator and simulator with cinematic output, sound effec
 ## 🚀 Usage
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/imei-simulator.git
+git clone https://github.com/mr-hackman/imei-simulator.git
 cd imei-simulator
 chmod +x imei_simulator.sh
 ./imei_simulator.sh
